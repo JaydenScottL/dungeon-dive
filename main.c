@@ -76,6 +76,8 @@ int main(){
 
     printDungeon(dungeon);
 
+    deleteDungeon(dungeon);
+
     return 0;
 }
 
