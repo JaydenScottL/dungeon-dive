@@ -53,7 +53,23 @@ void printDungeon(ROOM *room){
 }
 
 void deleteDungeon(ROOM *room){
-    free(room);
+
+    ROOM *temp = room;
+    
+    while(1){
+
+        if(temp->East == NULL){
+            free(temp);
+            break;
+        }
+
+        
+        temp = temp->East;
+
+        free(temp->West);
+    }
+
+    
 }
 
 int main(){
