@@ -4,8 +4,11 @@
 #include <ctype.h>
 #include "stringManip.h"
 
+
+//forward declaration
 typedef struct ROOM ROOM;
 
+// room struct
 struct ROOM{
     char name[1024];
     char code[100];
@@ -17,7 +20,7 @@ struct ROOM{
 
 };
 
-
+// returns a new room pointer
 ROOM *roomCreate(ROOM* room){
     ROOM *r = malloc(sizeof(ROOM));
     *r = *room;
@@ -27,6 +30,7 @@ ROOM *roomCreate(ROOM* room){
     return r;
 }
 
+// return pointer to list of rooms
 ROOM *readRoomFile(char* filename,int *roomArraySize){
     FILE *fp = fopen(filename,"r");
 

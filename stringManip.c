@@ -3,6 +3,7 @@
 #include <string.h>
 #include <ctype.h>
 
+//trims string and returns pointer
 char *str_trim(char *s){
     while(isspace(*s)) s++;
 
@@ -15,6 +16,7 @@ char *str_trim(char *s){
     return s;
 }
 
+//returns pointer to a substring
 char *str_cut(char *s,int start,int end){
 
     s += start;

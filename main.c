@@ -6,6 +6,12 @@
 #include "roomManip.h"
 #include <time.h>
 
+/*
+Name: Jayden LeCorps
+Date: 10/29/2024
+*/
+
+//returns a pointer to a linked list of rooms
 ROOM *createDungeon(ROOM *room,int roomsize,int dungeonsize){
     
     ROOM* head;
@@ -35,6 +41,7 @@ ROOM *createDungeon(ROOM *room,int roomsize,int dungeonsize){
     return head;
 }
 
+//prints linked list of rooms
 void printDungeon(ROOM *room){
 
     ROOM *temp = room;
@@ -52,6 +59,7 @@ void printDungeon(ROOM *room){
     }
 }
 
+//deletes linke list of rooms
 void deleteDungeon(ROOM *room){
 
     ROOM *temp = room;
